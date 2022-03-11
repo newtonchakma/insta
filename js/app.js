@@ -9,7 +9,7 @@ const getLikedPosts = () => {
 };
 
 const getReportedPosts = () => {
-
+  document.getElementById( "reported" ).textContent = ""; // solved reported post
     return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
@@ -155,10 +155,10 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach( (post) => {
+    reportedPosts.forEach( (post) => {
         const div = createPost(post);
         console.log(div);
-      const title =  document.getElementById( "reported" ).appendChild(div);
+       document.getElementById( "reported" ).appendChild(div);
     
       
 
