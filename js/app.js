@@ -4,7 +4,8 @@ const likedPostsId = [];
 const reportedPostsId = [];
 
 const getLikedPosts = () => {
-  
+
+  document.getElementById( "liked" ).textContent = ""; // like count solve
     return posts.filter((post) => likedPostsId.includes(post.id));
 };
 
